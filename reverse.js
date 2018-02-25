@@ -1,18 +1,3 @@
-/**
- * https://github.com/Pomax/svg-to-something
- * 
- * This code is in the public domain, except in jurisdictions that do
- * not recognise the public domain, where this code is MIT licensed.
- */
-(function (root, factory) {
-    if (typeof define === "function" && define.amd) {
-        define(factory);
-    } else if (typeof exports === "object") {
-        module.exports = factory();
-    } else {
-        root.SVGPathEditor = factory();
-    }
-}(this, function () {
 
   /**
    * Normalise an SVG path to absolute coordinates
@@ -323,15 +308,3 @@
 
     return paths.join(" ").replace(/ +/g,' ');
   };
-
-  /**
-   * Our return object
-   */
-  var SVGPathEditor = {
-    normalize: normalizePath,
-    reverseNormalized: reverseNormalizedPath,
-    reverse: reverseSubPath
-  };
-
-  return SVGPathEditor;
-}));
